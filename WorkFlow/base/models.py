@@ -41,7 +41,7 @@ class EmailList(models.Model):
         return self.name
  
  
-LOCATION = (
+STATES = (
     ('Running', 'Running'),
     ('Stopped', 'Stopped'),
     ('Not-published', 'Not-published')
@@ -59,7 +59,7 @@ class Automation(models.Model):
     Condition = models.CharField(max_length=20, default=None, null=True)
     Condition_details = jsonfield.JSONField(default=None, null=True)
     state = FSMField(default='Not-published',
-                     choices=LOCATION, protected=True)
+                     choices=STATES, protected=True)
     
     
     def __str__(self):
@@ -68,3 +68,9 @@ class Automation(models.Model):
     @transition(field=state, source='Not-published', target='Running')
     def change_state_to_running(self):
         return "State changed to running."
+    
+    @transition(field=state, source='Running', target='Stopped')
+    def change_state_from_running_to_stopped(self):
+        return "State changed to stopped."
+
+
