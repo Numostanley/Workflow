@@ -73,9 +73,11 @@ def Create_Automation(request):
         # print(authomation)
         if authomation.Action == 'Send_email':
             
-            with open('ActionAutomation.pkl', 'rb') as ActionAutomation_file:
-                automate = pickle.load(ActionAutomation_file)
-                
+            # with open('ActionAutomation.pkl', 'rb') as ActionAutomation_file:
+            #     automate = pickle.load(ActionAutomation_file)
+            
+            automate = ActionAutomation()
+              
             automate.register(automation=authomation, action=Send_Email)
             
             save_object(automate, 'ActionAutomation.pkl')
@@ -84,8 +86,10 @@ def Create_Automation(request):
             
         elif authomation.Action == 'Add_tag':
             
-            with open('ActionAutomation.pkl', 'rb') as ActionAutomation_file:
-                automate = pickle.load(ActionAutomation_file)
+            # with open('ActionAutomation.pkl', 'rb') as ActionAutomation_file:
+            #     automate = pickle.load(ActionAutomation_file)
+            
+            automate = ActionAutomation()
                 
             automate.register(automation=authomation, action=Add_Tag)
             

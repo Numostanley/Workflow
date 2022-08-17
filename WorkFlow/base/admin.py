@@ -7,4 +7,5 @@ admin.site.register(Automation)
 admin.site.register(EmailList)
 admin.site.register(Emails)
 admin.site.register(User)
+admin.site.register(Tags)
 
