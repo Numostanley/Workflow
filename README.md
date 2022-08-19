@@ -7,9 +7,10 @@ The workflow engine i've written can be used to create automations which can be 
 
 Below is a simple demonstration of my workflow, which is written in python programming language and the Django rest framework.
 
-First, the project can be run using the -$ python manage.py runserver- command from the root directory in the command line
+First, the project can be run using the -$ python manage.py runserver- command from the root directory in the command line. 
+The dependencies used in this project can be installed directly using the pip install -r requirements.txt command
 
-Next we'll go to the url route tha will be used to create our specific automation. Which is http://127.0.0.1:8000/create-authomation
+Next we'll go to the url route that will be used to create our specific automation. Which is http://127.0.0.1:8000/create-authomation
 
 From this API route, we'll pass in the details needed to create the Automation. Which will look like this;
 
@@ -62,7 +63,7 @@ And from our terminal (second to last line),  we can see that the automation was
 So we've successfully created two different automations that performs different tasks and are triggered by specific actions.
 
 
-The dependencies used in this project can be installed directly using the pip install -r requirements.txt command
+
 
 
 
