@@ -15,7 +15,7 @@ From this API route, we'll pass in the details needed to create the Automation. 
 
 ![Screenshot (20)](https://user-images.githubusercontent.com/90499278/185233904-10bbb796-b9e5-4631-a9b7-df6e5f92ec59.png)
 
-Once the post request has been seen, we'll get the following response;
+Once the post request has been sent successfully, we'll get the following response;
 
 ![Screenshot (21)](https://user-images.githubusercontent.com/90499278/185234147-ecfc880a-bd1f-4868-b8cd-b9b47bd98661.png)
 
@@ -62,7 +62,7 @@ And from our terminal (second to last line),  we can see that the automation was
 So we've successfully created two different automations that performs different tasks and are triggered by specific actions.
 
 
-
+The dependencies used in this project can be installed directly using the pip install -r requirements.txt command
 
 
 
